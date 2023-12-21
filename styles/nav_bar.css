@@ -1,0 +1,105 @@
+.portfolio-bar-root{
+    height: 50px;
+    width: 100%;
+    top: 0;
+    background-color: rgb(19, 19, 19);
+    position: sticky;
+}
+.img_nav{
+    height: 50px;
+}
+.row tr td a{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+.navArrowDropdown{
+    display: none;
+}
+
+.nav_choose:hover{
+    background-color: rgb(93, 93, 93);
+    .navArrowDropdown{
+        display: inline;
+    }
+    .navArrow{
+        display: none;
+    }
+}
+
+.nav-mobile{
+    display: none;
+    font-size: x-large;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_content{
+    display: none;
+    position: absolute;
+    width: 10%;
+    top: 45px;
+    background-color: rgb(47, 47, 47);
+    text-align: center;
+}
+.dropdown_content a{
+    display: block;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 10%;
+    height: 60px;
+    padding: 20px 30px;
+}
+.dropdown_content a:hover{
+    background-color: rgb(93, 93, 93);
+}
+.dropdown:hover .dropdown_content{
+    display: block;
+}
+.dropdown_content_first{
+    left: 46%;
+}
+.dropdown_content_second{
+    left: 61%;
+}
+@media only screen and (max-width: 576px){
+    .nav-desktop{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .dropdown_content{
+        width: 13%;
+    }
+    .dropdown_content_first{
+        left: 44%;
+    }
+    .dropdown_content_second{
+        left: 59%;
+    }
+}
+@media only screen and (max-width: 900px){
+    .dropdown_content{
+        width: 20%;
+    }
+    .dropdown_content_first{
+        left: 42%;
+    }
+    .dropdown_content_second{
+        left: 56%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .dropdown_content_second{
+        left: 61.5%;
+    }
+}
+
+
+

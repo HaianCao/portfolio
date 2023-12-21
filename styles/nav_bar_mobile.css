@@ -1,0 +1,38 @@
+.nav-mobile{
+    justify-content: space-between;
+}
+.nav_mobile_menu{
+    display: none;
+}
+.nav_mobile_menu div a{
+    color: white;
+    text-decoration: none;
+}
+.nav_mobile_menu div{
+    padding: 20px;
+    height: 50px;
+    width: 150px;
+    font-weight: 800;
+}
+.nav_mobile_menu div svg{
+    position: absolute;
+    right: 30px;
+}
+.navArrowDropdown_mobile1{
+    display: none;
+    rotate: 180deg;
+}
+.navArrowDropdown_mobile2{
+    display: none;
+    rotate: 180deg;
+}
+.contact_details{
+    display: none;
+}
+.project_details{
+    display: none;
+}
+.drop_mov{
+    color: rgb(130, 130, 130) !important;
+}
+

@@ -3,9 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./styles/nav_bar.css">
+    <link rel="stylesheet" href="./styles/nav_bar_mobile.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <script src="./scripts/nav_bar_mobile.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
+    <title>🎄 Portfolio 🦌</title>
+</head>
+<body style="width: 100%; margin: 0;">
+    <div class="portfolio-bar-root container" style="width: 100%; text-align: center; z-index: 1;">
+        <!-- For desktop -->
+        <table class="row nav-desktop" style="width:90%; height: 50px; color:white;">
+            <tr>
+                <td class="col-sm-2 nav_choose"><a href="#home"><img src="./images/icon_nav_bar.png" alt="" class="img_nav"></a></td>
+                <td class="col-sm-2 nav_choose"><a href="#home">Home</a></td>
+                <td class="col-sm-2 nav_choose"><a href="#about.html">About</a></td>
+                <td class="col-sm-2 dropdown nav_choose">
+                    <a href="">Contact
+                        <svg width="15" height="10" viewBox="0 0 8 5" class="navArrow">
+                            <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#7E7E7E">
+                            </path>
+                        </svg>
+                        <svg width="15" height="10" viewBox="0 0 8 5" class="navArrowDropdown">
+                            <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#fff">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="dropdown_content dropdown_content_first">
+                        <div style="height: 5px; background-color: rgb(255, 0, 0);"></div>
+                        <a href="https://www.facebook.com/haian.cao.18">Facebook</a>
+                        <a href="https://github.com/HaianCao">Github</a>
+                        <a href="https://discord.gg/cEwqf4bbxd">Discord</a>
+                    </div>
+                </td>
+                <td class="col-sm-2 dropdown nav_choose">
+                    <a href="">Project
+                        <svg width="15" height="10" viewBox="0 0 8 5" class="navArrow">
+                            <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#7E7E7E">
+                            </path>
+                        </svg>
+                        <svg width="15" height="10" viewBox="0 0 8 5" class="navArrowDropdown">
+                            <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#fff">
+                            </path>
+                        </svg>
+                    </a>
+                    <div class="dropdown_content dropdown_content_second">
+                        <div style="height: 5px; background-color: rgb(255, 0, 0);"></div>
+                        <a href="">Project 1</a>
+                        <a href="">Project 2</a>
+                        <a href="">Project 3</a>
+                    </div>
+                </td>
+                <td class="col-sm-2 .notHere" style="width: 0px;"></td>
+            </tr>
+        </table>
+
+        <!-- For mobile -->
+        <div class="nav-mobile" style="width:100%; height: 50px; color:white; z-index: 2;">
+            <div><a href="#home"><img src="./images/icon_nav_bar.png" alt="" class="img_nav"></a></div>
+            <div style="padding: 5px;" onclick="menu()"><img style="width: 40px; height: 40px; padding: 10px; background-color: rgb(75, 75, 75); border-radius: 10px;" src="./images/menu_nav_bar.png" alt=""></div>
+        </div>
+    </div>
+    <div class="nav_mobile_menu" style="position: fixed; top: 50px; width: 100%; height: 100%; background-color: rgb(255, 255, 255); z-index: 0; opacity: 0.4;"></div>
+    <div class="nav_mobile_menu" style="position: fixed; top: 50px; right: 0px; color: white; background-color: black; width: 200px; height: 100%;">
+        <div onclick="menu()"><a href="#home">Home</a></div>
+        <div onclick="menu()"><a href="#about.html">About</a></div>
+        <div onclick="dropdown_contact()">Contact
+            <svg style="top: 128px" width="15" height="10" viewBox="0 0 8 5" class="navArrow_mobile1">
+                <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#7E7E7E">
+                </path>
+            </svg>
+            <svg style="top: 128px" width="15" height="10" viewBox="0 0 8 5" class="navArrowDropdown_mobile1">
+                <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#fff">
+                </path>
+            </svg>
+        </div>
+        <div class="contact_details"><a href="https://www.facebook.com/haian.cao.18" style="color: rgb(124, 124, 124);">Facebook</a></div>
+        <div class="contact_details"><a href="https://github.com/HaianCao" style="color: rgb(124, 124, 124);">Github</a></div>
+        <div class="contact_details"><a href="https://discord.gg/cEwqf4bbxd" style="color: rgb(124, 124, 124);">Discord</a></div>
+        <div onclick="dropdown_project()">Project
+            <svg style="top: 177px" width="15" height="10" viewBox="0 0 8 5" class="navArrow_mobile2">
+                <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#7E7E7E">
+                </path>
+            </svg>
+            <svg style="top: 177px" width="15" height="10" viewBox="0 0 8 5" class="navArrowDropdown_mobile2">
+                <path d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z" fill="#fff">
+                </path>
+            </svg>
+        </div>
+        <div class="project_details"><a href="" style="color: rgb(124, 124, 124);">Project 1</a></div>
+        <div class="project_details"><a href="" style="color: rgb(124, 124, 124);">Project 2</a></div>
+        <div class="project_details"><a href="" style="color: rgb(124, 124, 124);">Project 3</a></div>
+    </div>
+    <div class="home_1" id="home">
+        <div class="portfolio_title">
+            <span class="portfolio_title_p">P</span>
+            <span class="portfolio_title_o">o</span>
+            <span class="portfolio_title_r">r</span>
+            <span class="portfolio_title_t">t</span>
+            <span class="folio">
+                <span>f</span>
+                <span>o</span>
+                <span>l</span>
+                <span>i</span>
+                <span>o</span>
+            </span>
+            <div class="replace_folio">
+                <span>F</span>
+                <span>o</span>
+                <span>l</span>
+                <span>i</span>
+                <span>o</span>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="home_introduce">Hỗn hợp X gồm CuO, Fe, FeO, Fe2O3 và Fe3O4 tác dụng hết với 300 ml dung dịch chứa H2SO4 1M và HNO3 1M, sau phản ứng hoàn toàn thu được dung dịch Y và thấy thoát ra 2,24 lít khí NO (sản phẩm khử duy nhất, đktc). Thể tích dung dịch NaOH 1M tối thiểu cần cho vào dung dịch Y để thu được kết tủa lớn nhất là bao nhiêu?</div>
+        <div class="hire_and_depress" style="margin-top: 50px;">
+            <a href=""><div class="hire" style="display: inline-block;">Hire me!</div></a>
+            <div class="space" style="height: 25px;"></div>
+            <a href=""><div class="depress" style="display: inline-block;">Depress me😭</div></a>
+        </div>
+    </div>
 </body>
 </html>
