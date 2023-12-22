@@ -2,6 +2,7 @@
     color: white; 
     font-weight: 700; 
     font-size: 90px;
+    width: 575px;
 }
 .home_1{
     padding: 200px;
@@ -21,6 +22,8 @@
 }
 .folio{
     display: inline-block;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 .replace_folio{
     display: none;
@@ -56,7 +59,7 @@
     background-color: rgb(18, 18, 18);
 }
 .depress:hover{
-    background-color: blue;
+    animation: depress_inside 1s normal forwards;
 }
 .space{
     display: none;
@@ -124,11 +127,11 @@
 .portfolio_title_t{
     animation: port_p 4s infinite;
 }
-.portfolio_title:hover{
+/* .portfolio_title:hover{
     .folio{
         animation: port_folio 4s infinite;
     }
-}
+} */
 @keyframes port_p{
     0%{transform: rotateY(0deg);}
     50%{transform: rotateY(180deg);}
@@ -156,5 +159,13 @@
     100%{
         transform: rotateX(360deg);
         color: rgb(255, 255, 255);
+    }
+}
+@keyframes depress_inside{
+    0%{
+        background: rgb(18, 18, 18);
+    }
+    100%{
+        background: blue;
     }
 }
